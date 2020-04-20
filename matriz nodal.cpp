@@ -1,5 +1,5 @@
 //Feliciano Morales Juan Daniel 10/04/20.
-//Copyright � 2020 Feliciano Morales Juan Daniel. Todos los derechos reservados
+//Copyright © 2020 Feliciano Morales Juan Daniel. Todos los derechos reservados
 #include <iostream>
 using namespace std;
 class Nodo
@@ -163,8 +163,11 @@ Nodo* LDE::Buscar(int x,int y)
 LDE LDE::operator +(LDE B)
 {	LDE F;
 	Nodo *A=Inicio,*D=B.Inicio;
+ //La condición esta mal, imaginate que tienes una matriz de 3X4 y otra de 2X6, segun tu programa si se podrian sumar.
 	if(B.Contar()==Contar())
+		
 	{	for(int i=1;i<=Fin->Obtienefila();i++)
+		//no utilices ciclos for, para una lista utilizamos ciclos while
 			for(int j=1,v;j<=Fin->Obtienecolumna();j++)
 			{ 	v=A->Obtienedato()+D->Obtienedato();
 				A=A->Obtienesig();
@@ -178,6 +181,7 @@ LDE LDE::operator +(LDE B)
 LDE LDE::operator -(LDE B)
 {	LDE F;
 	Nodo *A=Inicio,*D=B.Inicio;
+ //La condición esta mal, imaginate que tienes una matriz de 3X4 y otra de 2X6, segun tu programa si se podrian restar.
 	if(B.Contar()==Contar())
 	{	for(int i=1;i<=Fin->Obtienefila();i++)
 			for(int j=1;j<=Fin->Obtienecolumna();j++)
